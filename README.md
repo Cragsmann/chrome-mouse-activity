@@ -1,38 +1,35 @@
-Getting Started
+# Getting Started
+
 To set up and run the Chrome extension, follow these steps:
 
-1. Install Dependencies
-   First, install the necessary dependencies using either yarn or npm.
+# Install Dependencies
 
-# Using yarn
+First, install the necessary dependencies using either yarn or npm.
 
-yarn install
+Using yarn: yarn install
 
-# Or using npm
+Or using npm: npm install
 
-npm install
+# Build the Extension
 
-2. Build the Extension
-   After installing the dependencies, build the extension.
+After installing the dependencies, build the extension.
 
-# Using yarn
+Using yarn: yarn build
 
-yarn build
-
-# Or using npm
-
-npm run build
+Or using npm: npm run build
 This will compile the TypeScript files and bundle the extension into the dist folder.
 
-3. Load the Extension in Chrome
-   Open Chrome and navigate to chrome://extensions/.
-   Enable Developer mode using the toggle in the top-right corner.
-   Click on the "Load unpacked" button.
-   Select the dist folder in your project directory.
-   Your extension should now be loaded and ready to use!
+# Load the Extension in Chrome
 
-4. Debugging
-   You can inspect and debug different parts of the extension:
+Open Chrome and navigate to chrome://extensions/.
+Enable Developer mode using the toggle in the top-right corner.
+Click on the "Load unpacked" button.
+Select the dist folder in your project directory.
+Your extension should now be loaded and ready to use!
+
+# Debugging
+
+You can inspect and debug different parts of the extension:
 
 Popup: Right-click inside the extension popup and select Inspect.
 Content Script: Inspect any webpage where the content script is active by right-clicking on the page and selecting Inspect.
