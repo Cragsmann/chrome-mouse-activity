@@ -1,11 +1,6 @@
-console.log("This is service worker.");
-console.log("Extension version", chrome.runtime.getManifest().version);
+import { MouseTimeResponse } from "../popup/src/Popup";
 
-interface SiteData {
-  [hostname: string]: number;
-}
-
-let siteData: SiteData = {};
+const siteData: MouseTimeResponse = {};
 
 chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
   if (message.type === "mouse-move") {

@@ -3,6 +3,11 @@
   "name": "saferpass-extension-exercise",
   "version": "1.0.0",
   "description": "Tracks mouse activity time and displays it in a popup.",
+  "icons": {
+    "16": "mouse.png",
+    "48": "mouse.png",
+    "128": "mouse.png"
+  },
   "action": {
     "default_popup": "popup/index.html"
   },
