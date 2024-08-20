@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+Getting Started
+To set up and run the Chrome extension, follow these steps:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Install Dependencies
+   First, install the necessary dependencies using either yarn or npm.
 
-Currently, two official plugins are available:
+# Using yarn
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+yarn install
 
-## Expanding the ESLint configuration
+# Or using npm
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+npm install
 
-- Configure the top-level `parserOptions` property like this:
+2. Build the Extension
+   After installing the dependencies, build the extension.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+# Using yarn
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+yarn build
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# Or using npm
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm run build
+This will compile the TypeScript files and bundle the extension into the dist folder.
+
+3. Load the Extension in Chrome
+   Open Chrome and navigate to chrome://extensions/.
+   Enable Developer mode using the toggle in the top-right corner.
+   Click on the "Load unpacked" button.
+   Select the dist folder in your project directory.
+   Your extension should now be loaded and ready to use!
+
+4. Debugging
+   You can inspect and debug different parts of the extension:
+
+Popup: Right-click inside the extension popup and select Inspect.
+Content Script: Inspect any webpage where the content script is active by right-clicking on the page and selecting Inspect.
+Service Worker: Go to chrome://extensions/, find your extension, and click "Service worker" under "Inspect views".
